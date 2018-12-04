@@ -1,0 +1,29 @@
+{% load static %}
+<DOCTYPE!>
+	<html>
+	<head>
+		<title>AutoBuy</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="{%static 'css/cars.css' %}">
+	</head>
+	<body>
+	<div>
+		<h1 class="page-header">AutoBuy - The best service</h1>
+	</div>
+	<div>
+	{% for post in posts %}
+    <div>
+        <div class="title"><p>Published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1></div>
+        <div class="descrip"><p>Brand: {{ post.brand }}</p>
+        <p>Model: {{ post.model }}</p>
+        <p>{{ post.text|linebreaksbr }}</p>
+        <p>Price: {{ post.price }} $</p>
+        <img src="{{post.img}}" width="300">
+    </div>
+	{% endfor %}
+	</div>
+	</body>
+	</html>
