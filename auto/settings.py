@@ -10,6 +10,7 @@ ALLOWED_HOSTS = []
 
 
 INSTALLED_APPS = [
+    'motorbikes',
     'cars',
     'homepage',
     'django.contrib.admin',

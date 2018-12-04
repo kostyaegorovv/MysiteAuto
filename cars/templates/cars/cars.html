@@ -21,7 +21,7 @@
         <p>Model: {{ post.model }}</p>
         <p>{{ post.text|linebreaksbr }}</p>
         <p>Price: {{ post.price }} $</p>
-        <img src="{{post.img}}" width="300">
+        <img src="{{post.img.url}}" width="300">
     </div>
 	{% endfor %}
 	</div>
